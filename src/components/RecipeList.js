@@ -4,7 +4,7 @@ const RecipeList = ({ list }) => {
   return (
     <ul>
       {
-        list.map((item, index) => <li key={index}>{item.name}</li>)
+        list && list.map((item, index) => <li key={index}>{item.name}</li>)
       }
     </ul>
   )

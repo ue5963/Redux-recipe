@@ -1,4 +1,4 @@
-export const  recipe = [
+export default [
   { name: 'カレー粉', amount: 1, unit: '個' },
   { name: 'じゃがいも', amount: 1, unit: '個' },
   { name: 'にんじん', amount: 1, unit: '個' },

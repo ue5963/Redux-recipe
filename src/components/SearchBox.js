@@ -1,12 +1,20 @@
 import React, { useState } from 'react'
 
-const SearchBox = ({ searchList }) => {
+import { listFilter } from '../util'
+
+import _ from 'lodash'
+
+const SearchBox = ({ originList, setFilterList }) => {
+
   const [ text, setText ] = useState('search text')
 
   const onChange = e => {
     e.preventDefault()
+
     setText(e.target.value)
-    searchList(e.target.value)
+
+    const filteredList = listFilter(_.cloneDeep(originList), e.target.value)
+    setFilterList(filteredList)
   }
 
   return (
