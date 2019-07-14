@@ -1,16 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 
 import SearchBox from './components/SearchBox'
 import RecipeList from './components/RecipeList'
 
-import { recipe } from './mock/list'
+import { listFilter } from './util/index'
 
-function App() {
+import { recipe } from './mock/list'
+import _ from 'lodash'
+
+
+const App = () => {
+
+  const [list, setList] = useState(recipe)
+
+  const searchList = text => {
+    const filteredList = listFilter(_.cloneDeep(recipe), text)
+    setList(filteredList)
+  }
+
   return (
     <div>
-      <SearchBox />
-      <RecipeList list={recipe} />
+      <SearchBox searchList={searchList} />
+      <RecipeList list={list} />
     </div>
   )
 }
