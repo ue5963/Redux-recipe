@@ -1,0 +1,3 @@
+export const SET_ORIGINAL_LIST = 'SET_ORIGINAL_LIST'
+export const SET_LIST = 'SET_LIST'
+export const RECIPE_FILTER = 'RECIPE_FILTER'

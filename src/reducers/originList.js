@@ -1,3 +1,5 @@
+import { SET_ORIGINAL_LIST } from '../actionTypes'
+
 /**
  * Simple Reducer
  * action type に対してstateを返すだけ
@@ -8,7 +10,7 @@
  */
 const originList = (state = [], action) => {
   switch (action.type) {
-    case 'SET_ORIGINAL_LIST':
+    case SET_ORIGINAL_LIST:
       return action.originList
     default:
       return state

@@ -1,3 +1,7 @@
+import {
+  SET_LIST,
+  RECIPE_FILTER,
+} from '../actionTypes'
 /**
  * Simple Reducer
  * action type に対してstateを返すだけ
@@ -8,8 +12,8 @@
  */
 const recipe = (state = [], action) => {
   switch (action.type) {
-    case 'SET_LIST':
-    case 'RECIPE_FILTER':
+    case SET_LIST:
+    case RECIPE_FILTER:
       return action.list
     default:
       return state
