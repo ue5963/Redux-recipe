@@ -9,10 +9,19 @@ export const setOriginalList = list => ({
   originList: list,
 })
 
-export const setList = list => ({
-  type: SET_LIST,
-  list,
-})
+// export const setList = list => ({
+//   type: SET_LIST,
+//   list,
+// })
+
+export const setList = (list, dispatch) => {
+  setTimeout(() => {
+    dispatch({
+      type: SET_LIST,
+      list,
+    })
+  }, 1000)
+}
 
 export const setFilterList = list => ({
   type: RECIPE_FILTER,

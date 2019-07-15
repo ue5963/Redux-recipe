@@ -9,9 +9,12 @@ import AppContainer from './containers/AppContainer'
 import { Provider } from 'react-redux'
 
 // Redux store
-import { createStore } from 'redux'
-import rootReducer from './reducers'
-const store = createStore(rootReducer)
+// import { createStore } from 'redux'
+// import rootReducer from './reducers'
+// const store = createStore(rootReducer)
+
+import configureStore from './configureStore'
+const store = configureStore()
 
 ReactDOM.render(
   <Provider store={store}>
